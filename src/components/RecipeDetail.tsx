@@ -36,7 +36,7 @@ export const RecipeDetail: React.FC = () => {
     const client = Cookies.get("_client");
     const uid = Cookies.get("_uid");
 
-    const response = await axios.get<Recipe>(`http://localhost:3010/api/v1/users/${currentUser.id}/recipes/${id}`, {
+    const response = await axios.get<Recipe>(`${process.env.REACT_APP_API_URL}/users/${currentUser.id}/recipes/${id}`, {
       headers: {
         "access-token": accessToken,
         client: client,

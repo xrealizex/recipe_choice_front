@@ -24,7 +24,7 @@ export const FavoritesList = () => {
     const uid = Cookies.get("_uid");
 
     try {
-      const response = await axios.get(`http://localhost:3010/api/v1/users/${currentUser.id}/favorites`, {
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/users/${currentUser.id}/favorites`, {
         headers: {
           "access-token": accessToken,
           client: client,

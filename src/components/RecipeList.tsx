@@ -25,7 +25,7 @@ export const RecipeList: React.FC = () => {
     const accessToken = localStorage.getItem("token");
     const client = Cookies.get("_client");
     const uid = Cookies.get("_uid");
-    const response = await axios.get<RecipeType[]>(`http://localhost:3010/api/v1/users/${currentUser.id}/recipes`, {
+    const response = await axios.get<RecipeType[]>(`${process.env.REACT_APP_API_URL}/users/${currentUser.id}/recipes`, {
     headers: {
       "access-token": accessToken,
       client: client,
@@ -46,7 +46,7 @@ export const RecipeList: React.FC = () => {
     const uid = Cookies.get("_uid");
 
     try {
-      await axios.delete(`http://localhost:3010/api/v1/users/${currentUser.id}/recipes/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/users/${currentUser.id}/recipes/${id}`, {
         headers: {
           "access-token": accessToken,
           client: client,
@@ -74,7 +74,7 @@ export const RecipeList: React.FC = () => {
     const accessToken = localStorage.getItem("token");
     const client = Cookies.get("_client");
     const uid = Cookies.get("_uid");
-    const response = await axios.get<FavoriteType[]>(`http://localhost:3010/api/v1/users/${currentUser.id}/favorites`, {
+    const response = await axios.get<FavoriteType[]>(`${process.env.REACT_APP_API_URL}/users/${currentUser.id}/favorites`, {
       headers: {
         "access-token": accessToken,
         client: client,
@@ -99,7 +99,7 @@ export const RecipeList: React.FC = () => {
     const uid = Cookies.get("_uid");
     try {
       if (isFavorite(recipeId)) {
-        await axios.delete(`http://localhost:3010/api/v1/users/${currentUser.id}/favorites/${recipeId}`, {
+        await axios.delete(`${process.env.REACT_APP_API_URL}/users/${currentUser.id}/favorites/${recipeId}`, {
           headers: {
             "access-token": accessToken,
             client: client,
@@ -112,7 +112,7 @@ export const RecipeList: React.FC = () => {
         });
         console.log("お気に入りから削除しました。")
       } else {
-        await axios.post(`http://localhost:3010/api/v1/users/${currentUser.id}/favorites`, {
+        await axios.post(`${process.env.REACT_APP_API_URL}/users/${currentUser.id}/favorites`, {
           recipe_id: recipeId,
         }, {
           headers: {

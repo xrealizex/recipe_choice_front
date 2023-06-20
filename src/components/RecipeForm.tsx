@@ -20,7 +20,7 @@ type RecipeFormProps = {
 };
 
 const axiosBaseInstance = axios.create({
-  baseURL: "http://localhost:3010",
+  baseURL: process.env.REACT_APP_API_URL,
   headers: {
     "Content-Type": "application/json",
   },
@@ -68,7 +68,7 @@ export const RecipeForm: React.FC<RecipeFormProps> = ({
   }
 
   if (isNew) {
-    await axiosBaseInstance.post(`/api/v1/users/${currentUser.id}/recipes`, { title, description, category, easiness }, { headers });
+    await axiosBaseInstance.post(`/users/${currentUser.id}/recipes`, { title, description, category, easiness }, { headers });
   } else {
     await axiosBaseInstance.put(`/api/v1/users/${currentUser.id}/recipes/${initialValues.id}`, { title, description, category, easiness }, { headers });
   }
