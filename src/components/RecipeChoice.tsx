@@ -22,7 +22,7 @@ export const RecipeChoice: React.FC = () => {
     const accessToken = localStorage.getItem("token");
     const client = Cookies.get("_client");
     const uid = Cookies.get("_uid");
-    const response = await axios.get<RecipeType>(`http://localhost:3010/api/v1/users/${currentUser.id}/recipes/random`, {
+    const response = await axios.get<RecipeType>(`${process.env.REACT_APP_API_URL}/users/${currentUser.id}/recipes/random`, {
       headers: {
         "access-token": accessToken,
         client: client,
