@@ -1,46 +1,87 @@
-# Getting Started with Create React App
+# サービス概要
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+「もうこんだては迷わない！」あなたのこんだてをサポートする、献立支援アプリです。こんだてを登録するとランダムに選んでくれます。また、新しい発見を求めて、こんだての検索も行うことができます。
 
-In the project directory, you can run:
+# URL
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://web.recipe-choice.shop
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# 機能一覧
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+・会員登録機能(メールアドレス/パスワード/ユーザー名/)
 
-### `npm run build`
+・ログイン機能(Email/password)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+・ゲストログイン機能
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+・ログアウト機能
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+・献立登録機能
 
-### `npm run eject`
+・献立無作為抽出機能
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+・献立検索機能(楽天レシピ連携)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+・お気に入り機能
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# 使用技術
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## フロントエンド
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+・HTML/CSS
+
+・TypeScript(4.9.5)
+
+## バックエンド
+
+---
+
+・Ruby(3.1.3)
+
+## インフラ
+
+---
+
+・Docker
+
+## フレームワーク・ライブラリ
+
+---
+
+・React(18.2.0)
+
+・Ruby on Rails(7.0.4)
+
+・Chakra UI(2.4.0)
+
+# 制作背景
+
+---
+
+「毎日献立を考えるのが大変な人を助けたい」そんな気持ちからこのアプリを作成しました。料理が好きな人には楽天レシピを利用した献立検索機能を設けました。毎日の料理に苦戦している人も、毎日の料理を楽しんでいる人も、このアプリを利用してくれることを願っています。
+
+# ポイント
+
+---
+
+・シンプルで見やすいレイアウトを心がけました。
+
+・直感で操作できるようなレイアウトを心がけました。
+
+・気軽に利用できるようにゲストログイン機能を設けました。
+
+# ターゲット層
+
+---
+
+・毎日の料理に苦戦している、関心がある方
