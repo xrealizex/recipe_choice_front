@@ -17,12 +17,16 @@ export const SearchRecipes = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
 
   const searchRecipes = async () => {
-    const response = await axios.get(`http://localhost:3010/rakutens?keyword=${keyword}`);
-    const filteredRecipes = response.data.filter((recipe: Recipe) => recipe.categoryName.includes(keyword)).slice(0, 3);
-    if (filteredRecipes.length > 0) {
-      setRecipes(filteredRecipes);
-    } else {
-      setRecipes([{ categoryId: null, categoryName: `検索の結果、「${keyword}」を含む献立は見つかりませんでした。別のキーワードで検索してください。`, categoryUrl: "", parentCategoryId: null }]);
+    try {
+      const response = await axios.get(`${process.env.REACT_APP_RAKUTEN_API_URL}/rakutens?keyword=${keyword}`);
+      const filteredRecipes = response.data.filter((recipe: Recipe) => recipe.categoryName.includes(keyword)).slice(0, 3);
+      if (filteredRecipes.length > 0) {
+        setRecipes(filteredRecipes);
+      } else {
+        setRecipes([{ categoryId: null, categoryName: `検索の結果、「${keyword}」を含む献立は見つかりませんでした。別のキーワードで検索してください。`, categoryUrl: "", parentCategoryId: null }]);
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
