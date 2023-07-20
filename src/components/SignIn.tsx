@@ -17,9 +17,6 @@ export const SignIn: React.FC = () => {
   const { setIsSignedIn, setCurrentUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const toast = useToast();
-  //定数
-  const GUEST_EMAIL = "guest@example.com";
-  const GUEST_PASSWORD = "password";
 
   //ログイン機能
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>, params: SignInParams) => {
@@ -61,8 +58,8 @@ export const SignIn: React.FC = () => {
   //ゲストログイン機能
   const handleGuestSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     const guestParams: SignInParams = {
-      email: GUEST_EMAIL,
-      password: GUEST_PASSWORD
+      email: process.env.REACT_APP_GUEST_EMAIL || '',
+      password: process.env.REACT_APP_GUEST_PASSWORD || ''
     };
     handleSubmit(e, guestParams);
   };
