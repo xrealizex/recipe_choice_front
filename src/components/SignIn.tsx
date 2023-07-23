@@ -56,7 +56,7 @@ export const SignIn: React.FC = () => {
   };
 
   //ゲストログイン機能
-  const handleGuestSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleGuestSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     const guestParams: SignInParams = {
       email: process.env.REACT_APP_GUEST_EMAIL || '',
       password: process.env.REACT_APP_GUEST_PASSWORD || ''
