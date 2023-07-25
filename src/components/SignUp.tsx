@@ -78,6 +78,7 @@ export const SignUp: React.FC = () => {
               <FormLabel>メールアドレス</FormLabel>
               <Input
                 value={email}
+                placeholder="example@example.com"
                 onChange={event => setEmail(event.target.value)}
               />
             </FormControl>
@@ -85,6 +86,7 @@ export const SignUp: React.FC = () => {
               <FormLabel>パスワード</FormLabel>
               <Input
                 type="password"
+                placeholder="6文字以上"
                 value={password}
                 onChange={event => setPassword(event.target.value)}
               />

@@ -74,6 +74,7 @@ export const SignIn: React.FC = () => {
           <FormLabel>メールアドレス</FormLabel>
           <Input
             type="email"
+            placeholder="example@example.com"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
           />
@@ -82,6 +83,7 @@ export const SignIn: React.FC = () => {
           <FormLabel>パスワード</FormLabel>
           <Input
             type="password"
+            placeholder="6文字以上"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
@@ -99,7 +101,7 @@ export const SignIn: React.FC = () => {
           colorScheme="orange"
           onClick={handleGuestSubmit}
         >
-          いますぐ始める
+          試しに使ってみる
         </Button>
         <Text textAlign="center">
           アカウントをお持ちでなければ{" "}
