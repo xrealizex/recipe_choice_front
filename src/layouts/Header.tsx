@@ -44,7 +44,7 @@ export const Header: React.FC = () => {
     }
     if (isSignedIn) {
       return (
-        <Button colorScheme="white" variant="link" color="white" backgroundColor="transparent" _hover={{ backgroundColor: "teal.300" }} onClick={handleSignOut}>
+        <Button colorScheme="white" variant="link" color="white" backgroundColor="transparent" _hover={{ backgroundColor: "orange.300" }} onClick={handleSignOut}>
           ログアウト
         </Button>
       );
@@ -53,7 +53,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <Box bg="teal.500" color="white" px={4}>
+    <Box bg="orange.500" color="white" px={4}>
       <Flex h="4rem" alignItems="center">
       <IconButton
         aria-label="Menu"
@@ -61,7 +61,7 @@ export const Header: React.FC = () => {
         icon={<HamburgerIcon />}
         color="white"
         backgroundColor="transparent"
-        _hover={{ backgroundColor: "teal.300" }}
+        _hover={{ backgroundColor: "orange.300" }}
         mr={4}
         onClick={openModal}
       />
@@ -72,14 +72,14 @@ export const Header: React.FC = () => {
       <Modal size="lg" isOpen={isOpen} onClose={closeModal}>
         <ModalOverlay />
         <ModalContent mx={5} my={10}>
-          <ModalHeader color="teal.500" fontSize="2xl" fontWeight="bold">Menu</ModalHeader>
+          <ModalHeader color="orange.500" fontSize="2xl" fontWeight="bold">Menu</ModalHeader>
           <ModalCloseButton />
           <ModalBody mx={5} my={5}>
             <VStack spacing={4} align="start">
-              <Link href="/recipes" color="teal.500" textDecoration="underline" fontWeight="light">献立一覧</Link>
-              <Link href="/" color="teal.500" textDecoration="underline" fontWeight="light">今日の献立</Link>
-              <Link href="/recipes/new" color="teal.500" textDecoration="underline" fontWeight="light">献立作成</Link>
-              <Link href="/favorites" color="teal.500" textDecoration="underline" fontWeight="light">お気に入り一覧</Link>
+              <Link href="/recipes" color="orange.500" textDecoration="underline" fontWeight="light">献立一覧</Link>
+              <Link href="/" color="orange.500" textDecoration="underline" fontWeight="light">今日の献立</Link>
+              <Link href="/recipes/new" color="orange.500" textDecoration="underline" fontWeight="light">献立作成</Link>
+              <Link href="/favorites" color="orange.500" textDecoration="underline" fontWeight="light">お気に入り一覧</Link>
             </VStack>
           </ModalBody>
         </ModalContent>

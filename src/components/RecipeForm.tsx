@@ -77,7 +77,7 @@ export const RecipeForm: React.FC<RecipeFormProps> = ({
 
   return (
     <Box>
-      <Heading mb={6} color="teal.500">
+      <Heading mb={6} color="orange.500">
         {isNew ? "新しい献立を作成" : "献立を編集"}
       </Heading>
       <Box as="form" onSubmit={handleSubmit}>
@@ -130,10 +130,10 @@ export const RecipeForm: React.FC<RecipeFormProps> = ({
         </Select>
       </FormControl>
       <VStack mt={5} spacing={5} align="stretch">
-      <Button colorScheme="teal" type="submit">
+      <Button colorScheme="orange" type="submit">
         {isNew ? "献立作成" : "献立更新"}
         </Button>
-      <Button onClick={goBack} colorScheme="teal">
+      <Button onClick={goBack} colorScheme="orange">
         戻る
       </Button>
     </VStack>

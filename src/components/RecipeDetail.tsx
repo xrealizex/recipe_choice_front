@@ -61,7 +61,7 @@ export const RecipeDetail: React.FC = () => {
   return (
     <Box mx="auto" maxW="4xl">
       <VStack spacing={4} align="start">
-        <Heading mb={6} color="teal.500" fontSize="4xl">
+        <Heading mb={6} color="orange.500" fontSize="4xl">
           {recipe.title}
         </Heading>
         <Text fontSize="xl" fontWeight="bold">説明:</Text>
@@ -73,11 +73,11 @@ export const RecipeDetail: React.FC = () => {
       </VStack>
       <HStack justifyContent="center" spacing={6} mt={8}>
         <Link to={`/recipes/${recipe.id}/edit`}>
-          <Button colorScheme="blue">
+          <Button colorScheme="orange">
             編集
           </Button>
         </Link>
-        <Button onClick={goBack} colorScheme="blue">
+        <Button onClick={goBack} colorScheme="orange">
           戻る
         </Button>
       </HStack>

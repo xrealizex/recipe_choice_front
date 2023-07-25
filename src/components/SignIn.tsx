@@ -88,7 +88,7 @@ export const SignIn: React.FC = () => {
         </FormControl>
         <Button
           width="100%"
-          colorScheme="teal"
+          colorScheme="orange"
           onClick={(e) => handleSubmit(e, { email, password })}
           isDisabled={!email || !password}
         >
@@ -96,7 +96,7 @@ export const SignIn: React.FC = () => {
         </Button>
         <Button
           width="100%"
-          colorScheme="teal"
+          colorScheme="orange"
           onClick={handleGuestSubmit}
         >
           いますぐ始める

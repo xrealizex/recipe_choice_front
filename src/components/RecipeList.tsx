@@ -140,7 +140,7 @@ export const RecipeList: React.FC = () => {
 
   return (
     <Box>
-      <Heading mb={6} color="teal.500">献立一覧</Heading>
+      <Heading mb={6} color="orange.500">献立一覧</Heading>
       <VStack spacing={6}>
         {recipes.map((recipe) => (
           <Box
@@ -149,10 +149,10 @@ export const RecipeList: React.FC = () => {
             boxShadow="md"
             p={6}
             borderRadius="md"
-            bgColor="gray.100"
+            bgColor="orange.50"
           >
             <VStack alignItems="start" spacing={4}>
-              <Text fontSize="2xl" fontWeight="bold" color="blue.700">
+              <Text fontSize="2xl" fontWeight="bold" color="orange.700">
                 {recipe.title}
               </Text>
               <HStack>
@@ -174,21 +174,21 @@ export const RecipeList: React.FC = () => {
             </VStack>
             <HStack justifyContent="space-between" mt={4}>
               <Link to={`/recipes/${recipe.id}`}>
-                <Button colorScheme="teal">詳細</Button>
+                <Button colorScheme="orange">詳細</Button>
               </Link>
               <Button colorScheme="orange" onClick={() => deleteRecipe(recipe.id)}>
                 削除
               </Button>
-              <IconButton aria-label="Add to favorites" icon={isFavorite(recipe.id) ? <StarIcon color="orange.500"/> : <StarIcon color="gray.500"/>} onClick={() => handleFavorite(recipe.id)}/>
+              <IconButton aria-label="Add to favorites" bg={"orange.50"} icon={isFavorite(recipe.id) ? <StarIcon color="red.500"/> : <StarIcon color="gray.500"/>} onClick={() => handleFavorite(recipe.id)}/>
             </HStack>
           </Box>
         ))}
       </VStack>
       <HStack mt={5} spacing={5}>
         <Link to="/recipes/new">
-          <Button colorScheme="teal" width="100px">献立作成</Button>
+          <Button colorScheme="orange" width="100px">献立作成</Button>
         </Link>
-        <Button onClick={goBack} colorScheme="teal" width="100px">
+        <Button onClick={goBack} colorScheme="orange" width="100px">
           戻る
         </Button>
       </HStack>

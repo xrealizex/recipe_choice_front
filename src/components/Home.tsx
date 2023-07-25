@@ -35,7 +35,7 @@ export const Home: React.FC = () => {
   if (loading) {
     return (
       <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
-        <CircularProgress isIndeterminate color="teal.300" />
+        <CircularProgress isIndeterminate color="orange.300" />
       </Box>
     );
   }
@@ -45,7 +45,7 @@ export const Home: React.FC = () => {
       {isSignedIn && currentUser ? (
         <>
           <Flex justifyContent="flex-end" alignItems="center" p={2}>
-            <Text fontSize="sm" fontWeight="bold" color="teal.500">{currentUser?.name}の献立</Text>
+            <Text fontSize="sm" fontWeight="bold" color="orange.500">{currentUser?.name}の献立</Text>
           </Flex>
           <RecipeChoice />
         </>

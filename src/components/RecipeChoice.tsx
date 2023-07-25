@@ -39,11 +39,11 @@ export const RecipeChoice: React.FC = () => {
 
   return (
     <Box>
-    <Heading mb={6} color="teal.500">今日の献立はこれ！</Heading>
+    <Heading mb={6} color="orange.500">今日の献立はこれ！</Heading>
     <SimpleGrid columns={1} spacing={10}>
       {randomRecipe && (
         <Box boxShadow="lg" p="6" borderRadius="lg" bg="white" border="1px" borderColor="gray.200">
-          <Heading fontSize="2xl" fontWeight="bold" color="blue.700" textAlign="center">
+          <Heading fontSize="2xl" fontWeight="bold" color="orange.500" textAlign="center">
             {randomRecipe.title}
           </Heading>
           <VStack align="start" mt={4}>
@@ -68,14 +68,14 @@ export const RecipeChoice: React.FC = () => {
       )}
     </SimpleGrid>
     <HStack spacing={6} mt={8}>
-      <Button colorScheme="teal" onClick={fetchRandomRecipe} size="lg">
+      <Button colorScheme="orange" onClick={fetchRandomRecipe} size="lg">
         他の献立にする
       </Button>
       <Link to="/recipes/new">
-        <Button colorScheme="teal" size="lg">献立作成</Button>
+        <Button colorScheme="orange" size="lg">献立作成</Button>
       </Link>
       <Link to="/rakutens">
-        <Button colorScheme="teal" size="lg">献立検索</Button>
+        <Button colorScheme="orange" size="lg">献立検索</Button>
       </Link>
     </HStack>
   </Box>

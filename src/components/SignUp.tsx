@@ -101,7 +101,7 @@ export const SignUp: React.FC = () => {
             </FormControl>
             <Button
               type="submit"
-              colorScheme="teal"
+              colorScheme="orange"
               size="lg"
               width="100%"
               isDisabled={

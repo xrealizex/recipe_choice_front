@@ -45,18 +45,18 @@ export const SearchRecipes = () => {
           mb={4}
           placeholder="キーワードを入力してください"
         />
-        <Button onClick={searchRecipes} colorScheme="teal" mb={4}>検索する</Button>
+        <Button onClick={searchRecipes} colorScheme="orange" mb={4}>検索する</Button>
         {recipes.map((recipe, index) => (
           <Box key={index} p={5} shadow="md" borderWidth="1px" flex="1" borderRadius="md">
             <Heading fontSize="xl">{recipe.categoryName}</Heading>
             {recipe.categoryUrl && (
               <Text mt={4}>
-                <Link isExternal href={recipe.categoryUrl} color="teal.500">ページを表示する ⇲</Link>
+                <Link isExternal href={recipe.categoryUrl} color="orange.500">ページを表示する ⇲</Link>
               </Text>
             )}
           </Box>
         ))}
-        <Button onClick={goBack} colorScheme="teal">
+        <Button onClick={goBack} colorScheme="orange">
           戻る
         </Button>
       </VStack>

@@ -48,7 +48,7 @@ export const FavoritesList = () => {
 
   return (
     <Box>
-      <Heading mb={6} color="teal.500">お気に入り一覧</Heading>
+      <Heading mb={6} color="orange.500">お気に入り一覧</Heading>
       <VStack spacing={6}>
         {favorites.map((favorite) => (
           <Box
@@ -57,10 +57,10 @@ export const FavoritesList = () => {
             boxShadow="md"
             p={6}
             borderRadius="md"
-            bgColor="gray.100"
+            bgColor="orange.50"
           >
             <VStack alignItems="start" spacing={4}>
-              <Text fontSize="2xl" fontWeight="bold" color="blue.700">
+              <Text fontSize="2xl" fontWeight="bold" color="orange.700">
                 {favorite.recipe.title}
               </Text>
               <HStack>
@@ -86,7 +86,7 @@ export const FavoritesList = () => {
         ))}
       </VStack>
       <HStack justifyContent="center" spacing={6} mt={8}>
-        <Button onClick={goBack} colorScheme="teal">
+        <Button onClick={goBack} colorScheme="orange">
           戻る
         </Button>
       </HStack>
