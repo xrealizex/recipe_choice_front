@@ -57,7 +57,7 @@ export const RecipeChoice: React.FC = () => {
             </HStack>
             <HStack>
               <Text fontSize="sm" color="gray.600">
-                手軽さ:{" "}
+                難易度:{" "}
               </Text>
               <Text fontSize="sm" fontWeight="semibold">
                 {randomRecipe.easiness}

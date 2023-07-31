@@ -117,7 +117,7 @@ export const RecipeForm: React.FC<RecipeFormProps> = ({
         </Select>
       </FormControl>
       <FormControl id="easiness" mt={4}>
-        <FormLabel>手軽さ (1-5)</FormLabel>
+        <FormLabel>難易度</FormLabel>
         <Select
           value={easiness}
           onChange={(e) => setEasiness(parseInt(e.target.value))}

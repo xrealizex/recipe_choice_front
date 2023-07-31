@@ -68,7 +68,7 @@ export const RecipeDetail: React.FC = () => {
         <Text mt={2} fontSize="lg">{recipe.description}</Text>
         <Text fontSize="xl" fontWeight="bold">カテゴリー:</Text>
         <Text mt={2} fontSize="lg">{recipe.category}</Text>
-        <Text fontSize="xl" fontWeight="bold">手軽さ:</Text>
+        <Text fontSize="xl" fontWeight="bold">難易度:</Text>
         <Text mt={2} fontSize="lg">{recipe.easiness} / 5</Text>
       </VStack>
       <HStack justifyContent="center" spacing={6} mt={8}>
